@@ -1,0 +1,106 @@
+/* Genel yapı */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  padding-top: 20px; /* Üstten boşluk */
+  text-align: center;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 20px; /* Başlık ile kartlar arasındaki boşluk */
+  background-color: #fff;
+  color: #B22222;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Kartlar için container */
+.card-container {
+  display: flex;               /* Kartları yan yana sıralamak için flexbox */
+  justify-content: center;      /* Kartları ortalamak için */
+  gap: 20px;                    /* Kartlar arasındaki boşluk */
+  padding: 20px;
+  flex-wrap: wrap;              /* Ekran daraldıkça kartlar alt satıra geçer */
+  max-width: 100%;              /* Kartların genişliği sayfa genişliğini geçmesin */
+  box-sizing: border-box;      /* Padding hesaplamalarını doğru yapmak için */
+}
+
+/* Kartların boyutunu belirleme */
+.card {
+  width: 250px;                /* Her kartın genişliğini sabitliyoruz */
+  background-color: #FFF59D;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;      /* Butonun alt kısımda yer almasını sağlamak için flex */
+  justify-content: space-between; /* Kartın içeriği ve buton arasında boşluk bırakmak için */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.about {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #555;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px; /* Buton ile metin arasındaki boşluk */
+}
+
+/* Detay butonunun düzeni */
+.detay-buton {
+  color: #fff;
+  background-color: red;
+  font-weight: 200;
+  font-size: 15px;
+  display: block;                /* Butonu blok seviyesinde yaparak alt kısımda yer almasını sağlıyoruz */
+  padding: 12px 25px;
+  border-radius: 5px;            /* Yuvarlak köşeler */
+  text-align: center;            /* Metni ortalamak */
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;                  /* Sabit genişlik */
+  transition: background-color 0.3s ease; /* Hover efekti için geçiş */
+}
+
+.detay-buton:hover {
+  background-color: darkred;     /* Hover durumunda buton rengi değişecek */
+}
+
