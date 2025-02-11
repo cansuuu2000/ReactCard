@@ -27,7 +27,7 @@ function Card(props) {
       </div>
       <button className='detay-buton' onClick={TextContinue}>
         {
-          showFullText? " show" : "Details"
+          showFullText? " show" : "Detaylar"
         }
       </button>
     </div>
